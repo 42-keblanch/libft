@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug test_libft",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/tests/build/test_libft",
+      "cwd": "${workspaceFolder}/tests",
+      "MIMode": "gdb",
+      "preLaunchTask": "build test"
+    }
+  ]
+}
