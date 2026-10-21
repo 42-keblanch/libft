@@ -14,6 +14,15 @@ static int		g_del_calls;
 static void		*g_last_deleted;
 static void		*g_deleted[16];
 
+// Required by Unity (even if empty)
+void setUp(void) {
+    // Clean state before each test
+}
+
+void tearDown(void) {
+    // Cleanup after each test
+}
+
 static void	reset_counters(void)
 {
 	g_del_calls = 0;
@@ -678,4 +687,13 @@ void	run_list_tests(void)
 	/* integration */
 	RUN_TEST(test_integration_build_iterate_clear);
 	RUN_TEST(test_integration_front_and_back);
+}
+// The actual entry point the linker is looking for
+int main(void)
+{
+    UNITY_BEGIN();
+
+    run_list_tests(); // Calls all your tests
+
+    return UNITY_END(); // Prints summary and returns exit code (0 if all passed)
 }
