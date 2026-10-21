@@ -22,7 +22,7 @@
     {
       "label": "build test",
       "type": "shell",
-      "command": "make -C tests build/test_mylib",
+      "command": "make -C tests",
       "problemMatcher": "$gcc"
     }
   ]

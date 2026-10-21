@@ -7,6 +7,15 @@
 #include "libft.h"
 #include "test_utils.h"
 
+// Required by Unity (even if empty)
+void setUp(void) {
+    // Clean state before each test
+}
+
+void tearDown(void) {
+    // Cleanup after each test
+}
+
 /* ========================================================================== */
 /*  Helpers                                                                   */
 /* ========================================================================== */
@@ -896,4 +905,14 @@ void	run_additional_tests(void)
 	RUN_TEST(test_putnbr_fd_int_max);
 	RUN_TEST(test_putnbr_fd_int_min);
 	RUN_TEST(test_put_functions_can_be_chained);
+}
+
+// The actual entry point the linker is looking for
+int main(void)
+{
+    UNITY_BEGIN();
+
+    run_additional_tests(); // Calls all your tests
+
+    return UNITY_END(); // Prints summary and returns exit code (0 if all passed)
 }

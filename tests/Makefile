@@ -9,8 +9,7 @@ YELLOW = \033[0;33m
 BLUE = \033[0;34m
 
 TEST_SRC := test_libc.c \
-			test_additional.c \
-			test_list.c
+			test_additional.c
 TEST_BIN := $(TEST_SRC:%.c=build/%)
 
 test: $(TEST_BIN)

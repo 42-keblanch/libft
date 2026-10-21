@@ -5,7 +5,7 @@
       "name": "Debug test_libft",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/tests/build/test_libft",
+      "program": "${workspaceFolder}/tests/build/test_libc",
       "cwd": "${workspaceFolder}/tests",
       "MIMode": "gdb",
       "preLaunchTask": "build test"
